@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+    /* For screens larger than 768px (typical tablets and desktops) */
+    .grid-container {
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* For screens smaller than 768px (typical mobile screens) */
+    .grid-container {
+      grid-template-columns: repeat(2, minmax(180px, 1fr));
+      background-color: "red";
+      border: '1px solid green';
+    }
+  }
