@@ -5,7 +5,7 @@ import { IoHeartOutline } from "react-icons/io5";
 import Dropdown from "react-bootstrap/Dropdown";
 import Customize from "./Customize";
 
-const Body = ({category}) => {
+const Body = () => {
   const [filter, setFilter] = useState(false);
   const [selectedItem, setSelectedItem] = useState("RECOMMENDED");
 
@@ -27,9 +27,9 @@ const Body = ({category}) => {
     fetchData();
   }, []);
 
-  useEffect(()=>{
-    console.log(category,"category");
-  },[category])
+  // useEffect(()=>{
+  //   console.log(category,"category");
+  // },[category])
 
   const truncateTitle = (title, maxLength) => {
     var x = title.toUpperCase();
@@ -56,6 +56,7 @@ const Body = ({category}) => {
           marginBottom: "30px",
           display: "flex",
           alignItems: "center",
+          justifyContent:"space-between"
         }}
       >
         <div style={{ display: "flex", flexDirection: "row" }}>
@@ -76,6 +77,7 @@ const Body = ({category}) => {
             </p>
           )}
         </div>
+        
         <Dropdown onSelect={handleSelect}>
           <Dropdown.Toggle
             style={{
